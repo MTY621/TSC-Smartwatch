@@ -3928,6 +3928,13 @@ DIN A3, landscape with location and doc. field</description>
 <part name="ANT1" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="2450AT18B100E_2450AT18B100E" device="" value="2450AT18B100E"/>
 <part name="FRAME1" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="FRAMES_A3L-LOC" device=""/>
 <part name="FRAME2" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="FRAMES_A3L-LOC" device=""/>
+<part name="TP_SWO" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="HECTOR_WATCH_1_TP" device="TP20R"/>
+<part name="TP_SWDIO" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="HECTOR_WATCH_1_TP" device="TP20R"/>
+<part name="TP_SWDCLK" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="HECTOR_WATCH_1_TP" device="TP20R"/>
+<part name="TP_RESET" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="HECTOR_WATCH_1_TP" device="TP20R"/>
+<part name="TP_3.3V" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="HECTOR_WATCH_1_TP" device="TP20R"/>
+<part name="TP_GND" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="HECTOR_WATCH_1_TP" device="TP20R"/>
+<part name="GND61" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="SUPPLY1_GND" device="" value="GND"/>
 </parts>
 <sheets>
 <sheet>
@@ -4247,6 +4254,33 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="LAST_DATE_TIME" x="344.17" y="10.16" size="2.286" layer="94"/>
 <attribute name="SHEET" x="357.505" y="5.08" size="2.54" layer="94"/>
 </instance>
+<instance part="TP_SWO" gate="G$1" x="172.72" y="53.34" smashed="yes" rot="R270">
+<attribute name="NAME" x="176.53" y="52.07" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="171.45" y="52.07" size="1.778" layer="97" rot="R270"/>
+</instance>
+<instance part="TP_SWDIO" gate="G$1" x="172.72" y="48.26" smashed="yes" rot="R270">
+<attribute name="NAME" x="176.53" y="46.99" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="171.45" y="46.99" size="1.778" layer="97" rot="R270"/>
+</instance>
+<instance part="TP_SWDCLK" gate="G$1" x="172.72" y="43.18" smashed="yes" rot="R270">
+<attribute name="NAME" x="176.53" y="41.91" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="171.45" y="41.91" size="1.778" layer="97" rot="R270"/>
+</instance>
+<instance part="TP_RESET" gate="G$1" x="172.72" y="38.1" smashed="yes" rot="R270">
+<attribute name="NAME" x="176.53" y="36.83" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="171.45" y="36.83" size="1.778" layer="97" rot="R270"/>
+</instance>
+<instance part="TP_3.3V" gate="G$1" x="172.72" y="33.02" smashed="yes" rot="R270">
+<attribute name="NAME" x="176.53" y="31.75" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="171.45" y="31.75" size="1.778" layer="97" rot="R270"/>
+</instance>
+<instance part="TP_GND" gate="G$1" x="172.72" y="27.94" smashed="yes" rot="R270">
+<attribute name="NAME" x="176.53" y="26.67" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="171.45" y="26.67" size="1.778" layer="97" rot="R270"/>
+</instance>
+<instance part="GND61" gate="1" x="165.1" y="25.4" smashed="yes">
+<attribute name="VALUE" x="162.56" y="22.86" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -4473,6 +4507,11 @@ DIN A3, landscape with location and doc. field</description>
 <junction x="345.44" y="160.02"/>
 <pinref part="GND57" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="TP_GND" gate="G$1" pin="TP"/>
+<wire x1="170.18" y1="27.94" x2="165.1" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="GND61" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -4682,6 +4721,11 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="276.86" y1="121.92" x2="281.94" y2="121.92" width="0.1524" layer="91"/>
 <label x="281.94" y="121.92" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="TP_SWDIO" gate="G$1" pin="TP"/>
+<wire x1="170.18" y1="48.26" x2="165.1" y2="48.26" width="0.1524" layer="91"/>
+<label x="165.1" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="SWDCLK" class="0">
 <segment>
@@ -4694,6 +4738,11 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="276.86" y1="119.38" x2="281.94" y2="119.38" width="0.1524" layer="91"/>
 <label x="281.94" y="119.38" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="TP_SWDCLK" gate="G$1" pin="TP"/>
+<wire x1="170.18" y1="43.18" x2="165.1" y2="43.18" width="0.1524" layer="91"/>
+<label x="165.1" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="RESET" class="0">
 <segment>
@@ -4705,6 +4754,11 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="U1" gate="G$1" pin="P0.18/RESET@AC13"/>
 <wire x1="236.22" y1="99.06" x2="236.22" y2="93.98" width="0.1524" layer="91"/>
 <label x="236.22" y="93.98" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="TP_RESET" gate="G$1" pin="TP"/>
+<wire x1="170.18" y1="38.1" x2="165.1" y2="38.1" width="0.1524" layer="91"/>
+<label x="165.1" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="D-" class="0">
@@ -4810,6 +4864,11 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="U1" gate="G$1" pin="P1.00@AD22"/>
 <wire x1="259.08" y1="99.06" x2="259.08" y2="93.98" width="0.1524" layer="91"/>
 <label x="259.08" y="93.98" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="TP_SWO" gate="G$1" pin="TP"/>
+<wire x1="170.18" y1="53.34" x2="165.1" y2="53.34" width="0.1524" layer="91"/>
+<label x="165.1" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="P1.01" class="0">
@@ -5312,6 +5371,11 @@ DIN A3, landscape with location and doc. field</description>
 <junction x="226.06" y="73.66"/>
 <label x="220.98" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="C7" gate="C$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="TP_3.3V" gate="G$1" pin="TP"/>
+<wire x1="170.18" y1="33.02" x2="165.1" y2="33.02" width="0.1524" layer="91"/>
+<label x="165.1" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
