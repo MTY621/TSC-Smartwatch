@@ -3763,7 +3763,9 @@ DIN A3, landscape with location and doc. field</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.15" drill="0">
+</class>
+<class number="1" name="POWER" width="0.3" drill="0">
 </class>
 </classes>
 <parts>
@@ -3773,7 +3775,7 @@ DIN A3, landscape with location and doc. field</description>
 <part name="GND3" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="SUPPLY1_GND" device="" value="GND"/>
 <part name="GND4" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="SUPPLY1_GND" device="" value="GND"/>
 <part name="GND5" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="SUPPLY1_GND" device="" value="GND"/>
-<part name="R1" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="CPF0201D7K68C1_CPF0201D7K68C1" device="" value="10K"/>
+<part name="R9" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="CPF0201D7K68C1_CPF0201D7K68C1" device="" value="10K"/>
 <part name="C37" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="NORDIC_NRF_3_CAPACITOR" device="_0402_N" value="1μF"/>
 <part name="C39" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="NORDIC_NRF_3_CAPACITOR" device="_0402_N" value="1μF"/>
 <part name="C38" library="InkTime_v5" library_urn="urn:adsk.wipprod:fs.file:vf.a-hroK1ETJmXGG-M9gXLzA" deviceset="NORDIC_NRF_3_CAPACITOR" device="_0402_N" value="1μF"/>
@@ -3969,7 +3971,7 @@ DIN A3, landscape with location and doc. field</description>
 <instance part="GND5" gate="1" x="27.94" y="200.66" smashed="yes">
 <attribute name="VALUE" x="25.4" y="198.12" size="1.778" layer="96"/>
 </instance>
-<instance part="R1" gate="G$1" x="91.44" y="203.2" smashed="yes" rot="R90">
+<instance part="R9" gate="G$1" x="91.44" y="203.2" smashed="yes" rot="R90">
 <attribute name="NAME" x="90.17" y="212.09" size="1.778" layer="95" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="92.71" y="212.09" size="1.778" layer="96" rot="R90" align="bottom-center"/>
 </instance>
@@ -4285,7 +4287,7 @@ DIN A3, landscape with location and doc. field</description>
 <busses>
 </busses>
 <nets>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <pinref part="IC1" gate="G$1" pin="GND"/>
 <wire x1="81.28" y1="220.98" x2="83.82" y2="220.98" width="0.1524" layer="91"/>
@@ -4294,7 +4296,7 @@ DIN A3, landscape with location and doc. field</description>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="R9" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="C37" gate="C$1" pin="2"/>
@@ -4518,10 +4520,10 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="IC1" gate="G$1" pin="TS/MR"/>
 <wire x1="81.28" y1="223.52" x2="91.44" y2="223.52" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="223.52" x2="91.44" y2="220.98" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R9" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="VBAT" class="0">
+<net name="VBAT" class="1">
 <segment>
 <pinref part="IC1" gate="G$1" pin="BAT"/>
 <wire x1="81.28" y1="226.06" x2="99.06" y2="226.06" width="0.1524" layer="91"/>
@@ -4532,7 +4534,7 @@ DIN A3, landscape with location and doc. field</description>
 <label x="104.14" y="226.06" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="VREG" class="0">
+<net name="VREG" class="1">
 <segment>
 <pinref part="C39" gate="C$1" pin="1"/>
 <wire x1="48.26" y1="215.9" x2="48.26" y2="220.98" width="0.1524" layer="91"/>
@@ -4579,9 +4581,6 @@ DIN A3, landscape with location and doc. field</description>
 <label x="106.68" y="137.16" size="1.4224" layer="95" xref="yes"/>
 </segment>
 <segment>
-<label x="60.96" y="93.98" size="1.4224" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="IC3" gate="G$1" pin="SDX"/>
 <wire x1="88.9" y1="48.26" x2="91.44" y2="48.26" width="0.1524" layer="91"/>
 <label x="91.44" y="48.26" size="1.27" layer="95" xref="yes"/>
@@ -4590,6 +4589,15 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="U1" gate="G$1" pin="P0.06@L1"/>
 <wire x1="198.12" y1="142.24" x2="193.04" y2="142.24" width="0.1524" layer="91"/>
 <label x="193.04" y="142.24" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="2"/>
+<wire x1="55.88" y1="93.98" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="93.98" x2="60.96" y2="93.98" width="0.1524" layer="91"/>
+<junction x="58.42" y="93.98"/>
+<wire x1="58.42" y1="93.98" x2="58.42" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="TP_SDA" gate="G$1" pin="TP"/>
+<label x="60.96" y="93.98" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="PMIC_INT" class="0">
@@ -4646,37 +4654,6 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="L7" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="165.1" x2="93.98" y2="165.1" width="0.1524" layer="91"/>
 <label x="93.98" y="165.1" size="1.4224" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="R17" gate="G$1" pin="2"/>
-<wire x1="55.88" y1="101.6" x2="58.42" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="101.6" x2="60.96" y2="101.6" width="0.1524" layer="91"/>
-<junction x="58.42" y="101.6"/>
-<wire x1="58.42" y1="101.6" x2="58.42" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="TP_SCL" gate="G$1" pin="TP"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="R18" gate="G$1" pin="2"/>
-<wire x1="55.88" y1="93.98" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="93.98" x2="60.96" y2="93.98" width="0.1524" layer="91"/>
-<junction x="58.42" y="93.98"/>
-<wire x1="58.42" y1="93.98" x2="58.42" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="TP_SDA" gate="G$1" pin="TP"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="R17" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="101.6" x2="35.56" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="101.6" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="38.1" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="101.6" x2="30.48" y2="101.6" width="0.1524" layer="91"/>
-<junction x="35.56" y="101.6"/>
 </segment>
 </net>
 <net name="IMU_INT2" class="0">
@@ -4994,22 +4971,6 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="C20" gate="C$1" pin="1"/>
 </segment>
 </net>
-<net name="VDDH" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="VDDH@Y2"/>
-<wire x1="198.12" y1="121.92" x2="185.42" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="121.92" x2="185.42" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VDD@W1"/>
-<wire x1="198.12" y1="124.46" x2="185.42" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="124.46" x2="175.26" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="124.46" x2="175.26" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="124.46" x2="170.18" y2="124.46" width="0.1524" layer="91"/>
-<junction x="175.26" y="124.46"/>
-<label x="170.18" y="124.46" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="C6" gate="C$1" pin="1"/>
-<junction x="185.42" y="124.46"/>
-</segment>
-</net>
 <net name="HAPTIC_EN" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="P0.12@U1"/>
@@ -5238,7 +5199,7 @@ DIN A3, landscape with location and doc. field</description>
 <junction x="353.06" y="149.86"/>
 </segment>
 </net>
-<net name="VBUS" class="0">
+<net name="VBUS" class="1">
 <segment>
 <pinref part="IC1" gate="G$1" pin="IN"/>
 <wire x1="53.34" y1="226.06" x2="27.94" y2="226.06" width="0.1524" layer="91"/>
@@ -5271,9 +5232,6 @@ DIN A3, landscape with location and doc. field</description>
 <label x="106.68" y="144.78" size="1.4224" layer="95" xref="yes"/>
 </segment>
 <segment>
-<label x="60.96" y="101.6" size="1.4224" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="IC3" gate="G$1" pin="SCX"/>
 <wire x1="71.12" y1="35.56" x2="71.12" y2="30.48" width="0.1524" layer="91"/>
 <label x="71.12" y="30.48" size="1.4224" layer="95" rot="R270" xref="yes"/>
@@ -5283,8 +5241,17 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="198.12" y1="139.7" x2="193.04" y2="139.7" width="0.1524" layer="91"/>
 <label x="193.04" y="139.7" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="2"/>
+<wire x1="55.88" y1="101.6" x2="58.42" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="101.6" x2="60.96" y2="101.6" width="0.1524" layer="91"/>
+<junction x="58.42" y="101.6"/>
+<wire x1="58.42" y1="101.6" x2="58.42" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="TP_SCL" gate="G$1" pin="TP"/>
+<label x="60.96" y="101.6" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
-<net name="3V3" class="0">
+<net name="3V3" class="1">
 <segment>
 <pinref part="IC9" gate="G$1" pin="VOUT_2"/>
 <pinref part="C25" gate="C$1" pin="1"/>
@@ -5303,9 +5270,6 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="TP_3V3" gate="G$1" pin="TP"/>
 <wire x1="25.4" y1="124.46" x2="27.94" y2="124.46" width="0.1524" layer="91"/>
 <label x="27.94" y="124.46" size="1.4224" layer="95" xref="yes"/>
-</segment>
-<segment>
-<label x="30.48" y="101.6" size="1.4224" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="VDDIO"/>
@@ -5376,6 +5340,30 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="TP_3.3V" gate="G$1" pin="TP"/>
 <wire x1="170.18" y1="33.02" x2="165.1" y2="33.02" width="0.1524" layer="91"/>
 <label x="165.1" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="101.6" x2="33.02" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="R18" gate="G$1" pin="1"/>
+<wire x1="33.02" y1="101.6" x2="30.48" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="93.98" x2="33.02" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="93.98" x2="33.02" y2="101.6" width="0.1524" layer="91"/>
+<junction x="33.02" y="101.6"/>
+<label x="30.48" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="VDDH@Y2"/>
+<wire x1="198.12" y1="121.92" x2="185.42" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="121.92" x2="185.42" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="VDD@W1"/>
+<wire x1="198.12" y1="124.46" x2="185.42" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="124.46" x2="175.26" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="124.46" x2="175.26" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="124.46" x2="170.18" y2="124.46" width="0.1524" layer="91"/>
+<junction x="175.26" y="124.46"/>
+<label x="170.18" y="124.46" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="C6" gate="C$1" pin="1"/>
+<junction x="185.42" y="124.46"/>
 </segment>
 </net>
 </nets>
@@ -5708,7 +5696,7 @@ Protection</text>
 <pinref part="Q3" gate="G$1" pin="D"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <pinref part="D4" gate="G$1" pin="K"/>
 <wire x1="66.04" y1="220.98" x2="68.58" y2="220.98" width="0.1524" layer="91"/>
@@ -6308,7 +6296,7 @@ Protection</text>
 <label x="144.78" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="3V3" class="0">
+<net name="3V3" class="1">
 <segment>
 <pinref part="R_PWR_EPD" gate="G$1" pin="2"/>
 <wire x1="160.02" y1="228.6" x2="160.02" y2="231.14" width="0.1524" layer="91"/>
@@ -6341,7 +6329,7 @@ Protection</text>
 <junction x="342.9" y="162.56"/>
 </segment>
 </net>
-<net name="VBAT" class="0">
+<net name="VBAT" class="1">
 <segment>
 <pinref part="TP_VBAT" gate="G$1" pin="TP"/>
 <wire x1="223.52" y1="147.32" x2="218.44" y2="147.32" width="0.1524" layer="91"/>
@@ -6374,7 +6362,7 @@ Protection</text>
 <label x="347.98" y="218.44" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="VBUS" class="0">
+<net name="VBUS" class="1">
 <segment>
 <pinref part="D3" gate="G$1" pin="VBUS"/>
 <wire x1="340.36" y1="78.74" x2="342.9" y2="78.74" width="0.1524" layer="91"/>
